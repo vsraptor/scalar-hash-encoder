@@ -1,12 +1,11 @@
-# scalar-hash-encoder
-SDR : Scalar Matrix-Hash encoder
+###SDR : Scalar Matrix-Hash encoder
 
 #### What is this ?
 
-When you work with Sparse Distributed Representation /SDR/ data, you need to convert the integer datapoints
+When you work with *Sparse Distributed Representation* /SDR/ data, you need to convert the integer datapoints
 into SDR format /which in a nutshell is very sparse binary string/ : (http://ifni.co/bbHTM.html).
 
-So the library in this repo is one such Encoder that converts Integer =to=> SDR.
+So the library in this repo is one such Encoder that converts **Integer =to=> SDR**.
 The peculiarity of this specific encoder is that it uses Matrix based hash functions.
 
 #### How it works ?
@@ -19,15 +18,15 @@ To do this we create a randomly populated 0|1 - matrix of size NxM.
 To figure N and M we have to know what are the maximum input value and the number of output bits (2048 in our case).
 
 Let say the maximum input value is 20_000.
-That means we would need log2(2048) = 10 rows and log2(20_000) =~ 15 cols.
+That means we would need *log2(2048) = 10* rows and *log2(20_000) =~ 15* cols.
 After that the calculation is very simple.
 
 	1. We do AND operation of every row of the matrix with the input value.
 	2. We count all 1-bits for every row of the result
 	3. If the count of 1s is ODD this means the result bit will be 1, if the count is EVEN the result bit will be 0
-	4. Convert this bitstring to Integer /idx/.
+	4. Convert this **binary string** to **Integer** /idx/.
 
-So this Integer is the index of bit in the output SDR that has to be set to 1.
+So this *Integer* is the index of bit in the output SDR that has to be set to 1.
 Again for our specific case we have 40 such random matricies to generate 40 bits.
 
 That is it. Here is how sample hash-matrix looks like.
