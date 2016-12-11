@@ -52,7 +52,7 @@ That is it. Here is how sample hash-matrix looks like.
 
 :from encoders.scalar_mxhash_encoder import *
 
-: se = ScalarUHash(15000, nbits=128, sparsity=0.1)
+: se = ScalarMxHash(15000, nbits=128, sparsity=0.1)
 
 : se.encode(5)
 : bitarray('00000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000')
@@ -68,7 +68,7 @@ That is it. Here is how sample hash-matrix looks like.
 
 
 
-: se = ScalarUHash(max_in=20000, nbits=2048, sparsity=0.02)
+: se = ScalarMxHash(max_in=20000, nbits=2048, sparsity=0.02)
 : d = [ se.encode(np.random.randint(0,15000)) for x in range(1000) ]
 : se.avg_collision
 : 1.0110804927657982e-15
