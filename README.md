@@ -21,10 +21,10 @@ Let say the maximum input value is 20_000.
 That means we would need *log2(2048) = 10* rows and *log2(20_000) =~ 15* cols.
 After that the calculation is very simple.
 
-	1. We do AND operation of every row of the matrix with the input value.
-	2. We count all 1-bits for every row of the result
-	3. If the count of 1s is ODD this means the result bit will be 1, if the count is EVEN the result bit will be 0
-	4. Convert this **binary string** to **Integer** /idx/.
+1. We do AND operation of every row of the matrix with the input value.
+2. We count all 1-bits for every row of the result
+3. If the count of 1s is ODD this means the result bit will be 1, if the count is EVEN the result bit will be 0
+4. Convert this **binary string** to **Integer** /idx/.
 
 So this *Integer* is the index of bit in the output SDR that has to be set to 1.
 Again for our specific case we have 40 such random matricies to generate 40 bits.
