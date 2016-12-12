@@ -27,7 +27,7 @@ After that the calculation is very simple.
 4. Convert this **binary string** to **Integer** /idx/.
 
 So this **Integer** is the index of bit in the output SDR that has to be set to **1**.
-Again for our specific case we have 40 such random matricies to generate 40 bits.
+Again for our specific case we have 40 such random matricies to generate 40 indexes to bits in the output SDR.
 
 That is it. Here is how sample hash-matrix looks like.
 
