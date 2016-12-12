@@ -48,6 +48,15 @@ That is it. Here is how sample hash-matrix looks like.
 
 ```
 
+#### Requirments
+
+Requires bitarray lib.
+
+```python
+
+pip install bitarray
+
+```
 
 
 #### Example usage
